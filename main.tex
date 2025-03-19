@@ -1,0 +1,250 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumitem}
+\usepackage{amsmath} % Para símbolos matemáticos
+\usepackage{array} % Para melhorar a formatação da tabela
+
+\title{ATIVIDADE REALIZADA ATRAVÉS DO LATEX}
+\author{Ryan Paulino}
+\date{19/03/2025}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Lógica Proposicional e Aplicações}
+
+\textbf{1. (Rosen 1.1.1) Quais das sentenças abaixo são proposições? Qual o valor de verdade das que são proposições?}
+\begin{itemize}[label={}]
+    \item (a) Curitiba é a capital do Paraná.
+    \item (b) Joinville é a capital de Santa Catarina.
+    \item (c) 2 + 3 = 5
+    \item (d) 5 + 7 = 10
+    \item (e) x + 2 = 11 \> Não é uma proposição, pois o x é desconhecido, sendo assim, pode ser verdade ou não.
+    \item (f) Responda a esta questão. \> Não é uma proposição, pois é uma ordenação.
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c}
+    \hline
+    Sentenças & Valor de Verdade \\
+       A   & Verdadeira \\
+       B   & Falsa \\
+       C   & Verdadeira \\
+       D  & Falsa \\
+    \hline
+       
+    \end{tabular}
+\end{table}
+
+    \vspace{1cm}
+    \textbf{2. (Rosen 1.1.5) Considere que p e q são as proposições: “Nadar na praia em Copacabana é permitido” e “Foram descobertos tubarões perto da praia”, respectivamente. Expresse cada uma dessas proposições compostas como uma sentença em português.}
+
+    \begin{itemize}[label={}]
+       \item(a) $\neg  q$ \quad \= "Nadar na praia em copacabana não é permitido" "Não foram descobertos tubarões perto da praia" \\
+       
+       \item(b) $p \wedge q$ \> "Nadar na praia em Copacabana é permitido e Foram descobertos tubarões perto da praia" \\
+       
+       \item(c) $\neg p \vee q$ \> "Nadar na praia em copacabana não é permitido ou Foram descobertos tubarões perto da praia" \\
+       
+       \item(d) $p \rightarrow \neg q$ \> "Se nadar na praia em Copacabana é permitido, então não foram descobertos tubarões perto da praia" \\
+       
+       \item(e) $p \leftrightarrow \neg q$ \> "Nadar na praia em Copacabana é permitido somente se não for descoberto tubarões perto da praia" \\
+       
+       \item(f) $\neg p \wedge (p \vee \neg q)$ \> "Nadar na praia em Copacabana não é permitido e, ou Nadar na praia em Copacabana é permitido, ou não foram descobertos tubarões perto da praia." \\
+    \end{itemize}
+    
+\vspace{1cm}
+
+\textbf{3. (Rosen 1.1.7) Considere que p e q são as proposições:}
+
+   \begin{itemize}[label={}]
+    \item \( p \): "Está abaixo de zero."
+    \item \( q \): "Está nevando."
+\end{itemize}
+
+\textbf{Escreva estas proposições usando p, q e conectivos lógicos.}
+
+\begin{itemize}[label={}]
+    \item(a) Está abaixo de zero e nevando: \> $p \wedge q$ \\
+        
+    \item(b) Está abaixo de zero, mas não está nevando: \> $p \wedge \neg q$
+    
+    \item(c) Não está abaixo de zero e não está nevando: \> $\neg p \wedge \neg q$
+    
+    \item(d) Está nevando ou abaixo de zero (ou os dois): \> $q \lor p$
+    
+    \item(e) Se está abaixo de zero, está também nevando: \> $p \rightarrow q$
+    
+    \item(f) Está ou nevando ou abaixo de zero, mas não está nevando se estiver abaixo de zero: \> ($p \vee  q) \wedge (p \rightarrow \neg q)$
+    
+    \item(g) Para que esteja nevando, é necessário e suficiente que esteja abaixo de zero: \> $q \leftrightarrow p$
+    
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{4. (Rosen 1.1.11) Sejam p, q e r as seguintes proposições:}
+
+    \begin{itemize}[label={}]
+        \item \textbf{p}: “Ursos-cinzentos são vistos na área.”
+        \item \textbf{q}: “Fazer caminhada na trilha é seguro.”
+        \item \textbf{r}: “As bagas estão maduras ao longo da trilha.” 
+    \end{itemize}
+
+    \begin{itemize}[label={}]
+    \vspace{0.5mm}
+        \item \textbf{Escreva as seguintes proposições utilizando p, q, r e conectivos lógicos.}
+    \end{itemize}
+
+
+\begin{itemize}[label={}]
+    \item (a) As bagas estão maduras ao longo da trilha, mas os ursos-cinzentos não são vistos na área: \> $r \wedge \neg p$
+    
+    \item (b) Ursos-cinzentos não são vistos na área e fazer caminhada na trilha é seguro, mas as bagas estão maduras ao longo da trilha: \> $\neg p \wedge q \wedge r$
+    
+    \item (c) Se as bagas estão maduras ao longo da trilha, fazer caminhada é seguro se, e somente se, ursos-cinzentos não forem vistos na área: \> $r \rightarrow (q \leftrightarrow \neg p)$
+    
+    \item (d) Não é seguro fazer caminhada na trilha, mas os ursos-cinzentos não são vistos na área e as bagas ao longo da trilha estão maduras: \> $\neg q \wedge \neg p \wedge r $
+    
+    \item (e) Para a caminhada ser segura, é necessário, mas não suficiente, que as bagas não estejam maduras ao longo da trilha e que os ursos-cinzentos não sejam vistos na área: \> $q \rightarrow (\neg r \wedge \neg p)$
+
+    \item (f) Caminhada não é segura ao longo da trilha sempre que os ursos-cinzentos são vistos na área e as bagas estão maduras ao longo da trilha: \> $(p \wedge r)  \rightarrow \neg q $
+    
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{5. (Rosen 1.1.13) Determine se cada uma destas proposições condicionais é verdadeira ou falsa.}
+
+\begin{itemize}[label={}]
+    \item (a) Se 1 + 1 \texttt{=} 2, então 2 + 2 \texttt{=} 5. \> Falsa \\
+    \item (b) Se 1 + 1 \texttt{=} 3, então 2 + 2 \texttt{=} 4. \> Verdadeira \\
+    \item (c) Se 1 + 1 \texttt{=} 3, então 2 + 2 \texttt{=} 5. \> Verdadeira \\
+    \item (d) Se macacos puderem voar, então 1 + 1 \texttt{=} 3. \> Verdadeira \\
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{6. (Rosen 1.1.17) Reescreva cada sentença em português explicitando o que ela significa caso o “ou” utilizado seja inclusivo (ou seja, uma disjunção) e o que ela significa caso o “ou” utilizado seja exclusivo. Quais dos significados do “ou” você acha que o autor queria usar?}
+
+\begin{itemize}[label={}]
+    \item (a) Para cursar matemática discreta, você deve ter tido cálculo ou um curso de ciência da computação. \> 
+    
+    \textbf{R}: Seria \textbf{OU inclusivo}, pois para cursar matemática discreta, você deve ter um curso de cálculo ou de ciência da computação, ou ambos os cursos. \\
+    
+    \item (b) Quando você compra um novo carro da Companhia Acme Motor, você pega de volta \$2.000 ou um empréstimo de 2\%. \> 
+    
+    \textbf{R}: Seria o \textbf{OU exclusivo}, pois você tem que escolher um ou outro, mas não os dois. \\
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{7. (Rosen 1.1.19) Escreva cada uma das proposições abaixo na forma “se p, então q” em português.}
+
+\begin{itemize}[label={}]
+    \item (a) Neva sempre que o vento sopra no Nordeste. \>
+    
+    \textbf{R}: Se o vento sopra no Nordeste, então sempre neva.\\
+
+    
+    \item (b) É necessário andar 8 quilômetros para chegar ao topo do monte Roraima. \>
+    
+    \textbf{R}: Se não andar 8 quilômetros, então não é possível chegar ao topo do monte Roraima.\\
+    
+
+    \item (c) Para conseguir ser efetivado como professor, é suficiente ser famoso na universidade.\>
+     
+    \textbf{R}: Se for famoso na universidade, então conseguirá ser efetivado como professor.\\
+   
+    
+    \item (d) Sua garantia é válida apenas se você comprou seu aparelho de som em menos de 90 dias. \>
+     
+     
+    \textbf{R}: Se você não comprou seu aparelho de som em menos de 90 dias, então sua garantia não é válida.\\
+   
+    
+    \item (e) Yogananda nadará a menos que a água esteja muito fria. \>
+     
+    \textbf{R}: Se a água estiver muito fria, então Yogananda não nadará. \\
+    
+\end{itemize}
+
+\textbf{8. (Rosen 1.1.23) Determine a oposta/conversa, a contrapositiva e a inversa de cada uma das proposições condicionais.}
+
+\begin{itemize}[label={}]
+    
+    \item (a) Se nevar hoje, então esquiarei amanhã. \\ 
+    \textbf{R}: 
+    \item \textbf{(Conversa)}: Esquiarei amanhã, se hoje nevar.
+    \item \textbf{(Contrapositiva)}: Não esquiarei amanhã, se não nevar hoje.
+    \item \textbf{(Inversa)}: Se não nevar hoje, não esquiarei amanhã.
+\\
+
+    \item (b) Se há uma prova, então eu venho à aula. \\
+    \textbf{R}: 
+    \item \textbf{(Conversa)}: Se eu venho a aula, então hà uma prova
+    \item \textbf{(Contrapositiva)}: Não vou a aula, se não tiver prova.
+    \item \textbf{(Inversa)}: Se não tiver prova, então não vou à aula.
+\\
+\end{itemize}
+
+\vspace{1cm}
+
+\textbf{9. (Rosen 1.1.27) Construa a tabela da verdade para cada uma das proposições compostas abaixo.}
+
+
+\section*{Tabelas Verdade}
+
+\subsection*{(a) \( (p \lor \neg q) \rightarrow q \)}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \( p \) & \( q \) & \( \neg q \) & \( p \lor \neg q \) & \( (p \lor \neg q) \rightarrow q \) \\  
+        \hline
+        V & V & F & V & V \\  
+        V & F & V & V & V \\  
+        F & V & F & F & V \\  
+        F & F & V & V & F \\  
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{(b) \( (p \rightarrow q) \leftrightarrow (\neg q \rightarrow \neg p) \)}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \( p \) & \( q \) & \( \neg p \) & \( \neg q \) & \( p \rightarrow q \) & \( \neg q \rightarrow \neg p \) \\  
+        \hline
+        V & V & F & F & V & V \\  
+        V & F & F & V & F & F \\  
+        F & V & V & F & V & V \\  
+        F & F & V & V & V & V \\  
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection*{(c) \( (p \oplus q) \rightarrow (p \land q) \)}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \( p \) & \( q \) & \( p \oplus q \) & \( p \land q \) & \( (p \oplus q) \rightarrow (p \land q) \) \\  
+        \hline
+        V & V & F & V & V \\  
+        V & F & V & F & F \\  
+        F & V & V & F & F \\  
+        F & F & F & F & V \\  
+        \hline
+    \end{tabular}
+\end{center}
+
+\end{document}
+
+        
+
+\end{document}
